@@ -7,6 +7,7 @@
 
 int main(int ac, char *av[]){
     if(ac!=2)
+        /* You may need to add /dev before ttyname, e.g. /dev/pts/1 */
         fprintf(stderr, "usage: %s ttyname\n", av[0]);
     else {
         int fd=open(av[1], O_WRONLY);
